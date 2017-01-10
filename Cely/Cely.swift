@@ -13,7 +13,7 @@ import Locksmith
 public struct Cely {
 
     fileprivate init() {}
-    public typealias CelyLoginCompletion = (_ username: String, _ password: String) -> Void
+    public typealias CelyLoginCompletion = (_ username: String, _ password: String, _ viewController: UIViewController?) -> Void
     /// Properties that are needed inorder for user to stay logged in.
     internal static var requiredProperties: [CelyProperty] = []
 

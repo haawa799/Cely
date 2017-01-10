@@ -59,7 +59,7 @@ class CelyLoginViewController: UIViewController {
 
     func didPressLogin() {
         if let username = usernameField?.text, let password = passwordField?.text {
-            Cely.loginCompletionBlock?(username, password)
+            Cely.loginCompletionBlock?(username, password, self)
         }
 
         usernameField?.text = ""
