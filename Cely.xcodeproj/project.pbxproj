@@ -116,7 +116,6 @@
 		31358EB31DB31BC400AC7119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31358EB51DB31BC400AC7119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31358EB91DB31BDE00AC7119 /* Cely Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cely Demo.entitlements"; sourceTree = "<group>"; };
-		31358EBF1DB31CA800AC7119 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Locksmith.framework; sourceTree = "<group>"; };
 		317516401DB7B23C00974002 /* TestStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TestStoryboard.storyboard; path = ../CelyTests/Frameworks/TestStoryboard.storyboard; sourceTree = "<group>"; };
 		31D9B96B1DCD72700039BCB8 /* CelyProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelyProtocols.swift; sourceTree = "<group>"; };
 		31D9B96D1DCD748F0039BCB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Supporting Files/Assets.xcassets"; sourceTree = "<group>"; };
@@ -230,7 +229,6 @@
 		31358EA81DB31BC400AC7119 /* Cely Demo */ = {
 			isa = PBXGroup;
 			children = (
-				31358EBF1DB31CA800AC7119 /* Locksmith.framework */,
 				31358EA91DB31BC400AC7119 /* AppDelegate.swift */,
 				311B1F2B1DB31FF6005A155B /* User.swift */,
 				31358EAB1DB31BC400AC7119 /* ViewController.swift */,
