@@ -19,8 +19,8 @@ class DummyUser: CelyUser {
 class DummyStorage: CelyStorageProtocol {
 
     public var dummyStorage: [String : Any?] = [
-        "username":"testUser",
-        "token":"helloToken"
+        "username": "testUser",
+        "token": "helloToken"
     ]
 
     static var successful_setCalls = 0
@@ -32,14 +32,13 @@ class DummyStorage: CelyStorageProtocol {
     }
 
     func get(_ key: String) -> Any? {
-        return dummyStorage[key]
+        return dummyStorage[key] as Any
     }
 
     func removeAllData() {
         DummyStorage.successful_removeCalls += 1
     }
 }
-
 
 /// Tests for Cely Framework
 class CelyTests: XCTestCase {
@@ -81,7 +80,6 @@ class CelyTests: XCTestCase {
         NotificationCenter.default.removeObserver(self)
         super.tearDown()
     }
-
 
     func testSetup() {
         let testRequiredProperties = _properties.flatMap({"\($0.rawValue)"})

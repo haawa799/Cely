@@ -29,7 +29,7 @@ public class CelyStorage: CelyStorageProtocol {
         let launchedBefore = persistedDict?[kLaunchedBefore] as? Bool
         if launchedBefore == nil {
             // If not, Clear everything and set flag
-            UserDefaults.standard.setPersistentDomain([kStore: [:], kPersisted: [kLaunchedBefore:true]], forName: kCelyDomain)
+            UserDefaults.standard.setPersistentDomain([kStore: [:], kPersisted: [kLaunchedBefore: true]], forName: kCelyDomain)
             UserDefaults.standard.synchronize()
 
             // Clear Locksmith
