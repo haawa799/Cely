@@ -65,6 +65,7 @@ public class CelyWindowManager {
         }
     }
 
+    //http://stackoverflow.com/questions/7703806/rootviewcontroller-switch-transition-animation
     func changeRootViewController(window: UIWindow, viewController: UIViewController?) {
       guard let viewController = viewController else { return }
       guard let snapshot: UIView = (window.snapshotView(afterScreenUpdates: true)) else { return }

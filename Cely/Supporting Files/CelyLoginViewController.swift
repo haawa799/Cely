@@ -42,7 +42,7 @@ class CelyLoginViewController: UIViewController {
         loginButton?.backgroundColor = styles.buttonBackgroundColor()
         textFields?.forEach({$0.backgroundColor = styles.textFieldBackgroundColor()})
         if let image = styles.appLogo() {
-            appImageView.image = image
+            appImageView?.image = image
         }
     }
 
