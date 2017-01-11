@@ -37,8 +37,8 @@
 		31DB1FEB1DCE111900BE1D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31D9B96D1DCD748F0039BCB8 /* Assets.xcassets */; };
 		31DB1FED1DCE132200BE1D1A /* ChaiOneLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DB1FEC1DCE132200BE1D1A /* ChaiOneLogo.png */; };
 		31DB1FEF1DCE226700BE1D1A /* ConstantsAndProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DB1FEE1DCE226700BE1D1A /* ConstantsAndProtocolTests.swift */; };
-		43D70F6D1E25167C00787086 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D70F6C1E25167C00787086 /* Locksmith.framework */; };
-		43D70F6E1E25167C00787086 /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43D70F6C1E25167C00787086 /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43DB41141E266A6200BD9E6C /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311B1F351DB3302B005A155B /* Locksmith.framework */; };
+		43DB41151E266A6200BD9E6C /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 311B1F351DB3302B005A155B /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				311B1F281DB31FC6005A155B /* Cely.framework in Embed Frameworks */,
-				43D70F6E1E25167C00787086 /* Locksmith.framework in Embed Frameworks */,
+				43DB41151E266A6200BD9E6C /* Locksmith.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,7 +123,6 @@
 		31DAA33D1DB289220040B266 /* CelyWindowManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelyWindowManagerTest.swift; sourceTree = "<group>"; };
 		31DB1FEC1DCE132200BE1D1A /* ChaiOneLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChaiOneLogo.png; sourceTree = "<group>"; };
 		31DB1FEE1DCE226700BE1D1A /* ConstantsAndProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsAndProtocolTests.swift; sourceTree = "<group>"; };
-		43D70F6C1E25167C00787086 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				311B1F271DB31FC6005A155B /* Cely.framework in Frameworks */,
-				43D70F6D1E25167C00787086 /* Locksmith.framework in Frameworks */,
+				43DB41141E266A6200BD9E6C /* Locksmith.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +157,6 @@
 		1FAA02321D4E7B5B00A6D209 = {
 			isa = PBXGroup;
 			children = (
-				43D70F6C1E25167C00787086 /* Locksmith.framework */,
 				1FAA023E1D4E7B5B00A6D209 /* Cely */,
 				1FB2B23D1DB1751600716E80 /* CelyTests */,
 				31358EA81DB31BC400AC7119 /* Cely Demo */,
