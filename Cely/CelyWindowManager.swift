@@ -58,11 +58,24 @@ public class CelyWindowManager {
     @objc func showScreenWith(notification: NSNotification) {
         if let status = notification.object as? CelyStatus {
             if status == .loggedIn {
-                CelyWindowManager.manager.window.rootViewController = CelyWindowManager.manager.homeStoryboard.instantiateInitialViewController()
+                changeRootViewController(window: CelyWindowManager.manager.window, viewController: CelyWindowManager.manager.homeStoryboard.instantiateInitialViewController())
             } else {
-                CelyWindowManager.manager.window.rootViewController = CelyWindowManager.manager.loginStoryboard.instantiateInitialViewController()
+              changeRootViewController(window: CelyWindowManager.manager.window, viewController: CelyWindowManager.manager.loginStoryboard.instantiateInitialViewController())
             }
         }
+    }
+
+    func changeRootViewController(window: UIWindow, viewController: UIViewController?) {
+      guard let viewController = viewController else { return }
+      guard let snapshot: UIView = (window.snapshotView(afterScreenUpdates: true)) else { return }
+      viewController.view.addSubview(snapshot)
+      window.rootViewController = viewController
+      UIView.animate(withDuration: 0.3, animations: {() in
+        snapshot.layer.opacity = 0
+        snapshot.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5)
+      }, completion: { ( _: Bool) in
+        snapshot.removeFromSuperview()
+      })
     }
 
     static func setHomeStoryboard(_ storyboard: UIStoryboard?) {
