@@ -8,6 +8,11 @@
 
 import Foundation
 
+public protocol CelyWindowManagerDelegate: class {
+  var shouldTryUsingMainStoryboard: Bool { get }
+  func presentingCallback(window: UIWindow, status: CelyStatus)
+}
+
 public class CelyWindowManager {
 
     // MARK: - Variables
@@ -15,20 +20,25 @@ public class CelyWindowManager {
     internal var window: UIWindow!
 
     public var loginStoryboard: UIStoryboard!
-    public var homeStoryboard: UIStoryboard!
-    public var loginStyle: CelyStyle!
-
-    private init() {
+    public lazy var homeStoryboard: UIStoryboard? = {
+        guard (self.delegate?.shouldTryUsingMainStoryboard == true) || (self.delegate == nil) else { return nil }
         let notTesting = ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil
-
-        loginStoryboard = UIStoryboard(name: "Cely", bundle: Bundle(for: type(of: self)))
-        homeStoryboard = notTesting ?
+        let homeStoryboard = notTesting ?
             UIStoryboard(name: "Main", bundle: Bundle.main) :
             UIStoryboard(name: "TestMain", bundle: Bundle(for: type(of: self)))
+        return homeStoryboard
+    }()
+    public var loginStyle: CelyStyle!
+
+    weak var delegate: CelyWindowManagerDelegate?
+
+    private init() {
+        loginStoryboard = UIStoryboard(name: "Cely", bundle: Bundle(for: type(of: self)))
     }
 
-    static func setup(window _window: UIWindow, withOptions options: [CelyOptions : Any?]? = [:]) {
+    static func setup(delegate: CelyWindowManagerDelegate? = nil, window _window: UIWindow, withOptions options: [CelyOptions : Any?]? = [:]) {
         CelyWindowManager.manager.window = _window
+        CelyWindowManager.manager.delegate = delegate
 
         // Set the login Styles
         CelyWindowManager.manager.loginStyle = options?[.loginStyle] as? CelyStyle ?? DefaultSyle()
@@ -57,8 +67,11 @@ public class CelyWindowManager {
 
     @objc func showScreenWith(notification: NSNotification) {
         if let status = notification.object as? CelyStatus {
+            CelyWindowManager.manager.delegate?.presentingCallback(window: CelyWindowManager.manager.window, status: status)
+            let useStoryboard = CelyWindowManager.manager.delegate?.shouldTryUsingMainStoryboard ?? true
             if status == .loggedIn {
-                changeRootViewController(window: CelyWindowManager.manager.window, viewController: CelyWindowManager.manager.homeStoryboard.instantiateInitialViewController())
+                guard let homeStoryboard = CelyWindowManager.manager.homeStoryboard, useStoryboard == true else { return }
+                changeRootViewController(window: CelyWindowManager.manager.window, viewController: homeStoryboard.instantiateInitialViewController())
             } else {
               changeRootViewController(window: CelyWindowManager.manager.window, viewController: CelyWindowManager.manager.loginStoryboard.instantiateInitialViewController())
             }

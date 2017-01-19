@@ -29,7 +29,7 @@ public struct Cely {
     /// - parameter forModel:           The `Model` Cely will be storing.
     /// - parameter requiredProperties: `[CelyProperty]`: The properties that cely tests against to determine if a user is logged in.
     /// - parameter withOptions:         Dictionary of options to pass into cely upon setup. Please refer to `CelyOptions` to view all options.
-    public static func setup<T: CelyUser, U: RawRepresentable>(with window: UIWindow?, forModel: T, requiredProperties:[U] = [], withOptions options: [CelyOptions : Any?]? = [:]) where T.Property == U {
+    public static func setup<T: CelyUser, U: RawRepresentable>(delegate: CelyWindowManagerDelegate? = nil, window: UIWindow?, forModel: T, requiredProperties:[U] = [], withOptions options: [CelyOptions : Any?]? = [:]) where T.Property == U {
 
         Cely.requiredProperties = requiredProperties.flatMap({"\($0.rawValue)"})
 
@@ -37,7 +37,7 @@ public struct Cely {
         store = options?[.storage] as? CelyStorageProtocol ?? store
 
         if let window = window {
-            CelyWindowManager.setup(window: window, withOptions: options)
+            CelyWindowManager.setup(delegate: delegate, window: window, withOptions: options)
             changeStatus(to: currentLoginStatus())
         }
     }

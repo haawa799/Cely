@@ -11,13 +11,13 @@ import Cely
 import Locksmith
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CelyWindowManagerDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        Cely.setup(with: window!, forModel: User(), requiredProperties: [.token], withOptions: [
+        Cely.setup(delegate: self, window: window!, forModel: User(), requiredProperties: [.token], withOptions: [
           .loginCompletionBlock: { (username: String, password: String, viewController: UIViewController?) in
                 if username == "asdf" && password == "asdf" {
                     Cely.save(username, forKey: "username")
@@ -28,5 +28,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ])
 
         return true
+    }
+
+    var shouldTryUsingMainStoryboard: Bool {
+        return false
+    }
+
+    func presentingCallback(window: UIWindow, status: CelyStatus) {
+
     }
 }

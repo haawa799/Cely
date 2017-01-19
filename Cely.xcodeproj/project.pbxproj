@@ -26,7 +26,7 @@
 		311B1F361DB3302B005A155B /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311B1F351DB3302B005A155B /* Locksmith.framework */; };
 		31358EAA1DB31BC400AC7119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31358EA91DB31BC400AC7119 /* AppDelegate.swift */; };
 		31358EAC1DB31BC400AC7119 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31358EAB1DB31BC400AC7119 /* ViewController.swift */; };
-		31358EAF1DB31BC400AC7119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31358EAD1DB31BC400AC7119 /* Main.storyboard */; };
+		31358EAF1DB31BC400AC7119 /* Mainn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31358EAD1DB31BC400AC7119 /* Mainn.storyboard */; };
 		31358EB11DB31BC400AC7119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31358EB01DB31BC400AC7119 /* Assets.xcassets */; };
 		31358EB41DB31BC400AC7119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31358EB21DB31BC400AC7119 /* LaunchScreen.storyboard */; };
 		317516421DB7BD9D00974002 /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 317516401DB7B23C00974002 /* TestStoryboard.storyboard */; };
@@ -91,7 +91,7 @@
 
 /* Begin PBXFileReference section */
 		1F0C13341DB188AB00AC1C94 /* CelyStorageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CelyStorageTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		1F801A1A1DB141C100187FA6 /* CelyWindowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CelyWindowManager.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1F801A1A1DB141C100187FA6 /* CelyWindowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CelyWindowManager.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1F801A1F1DB143C100187FA6 /* CelyConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CelyConstants.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1F801A211DB1473A00187FA6 /* CelyStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CelyStorage.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1F9E55C21DC2426000435B52 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
@@ -109,9 +109,9 @@
 		311B1F2D1DB3230F005A155B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		311B1F351DB3302B005A155B /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
 		31358EA71DB31BC400AC7119 /* Cely Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cely Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		31358EA91DB31BC400AC7119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		31358EA91DB31BC400AC7119 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		31358EAB1DB31BC400AC7119 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		31358EAE1DB31BC400AC7119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		31358EAE1DB31BC400AC7119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Mainn.storyboard; sourceTree = "<group>"; };
 		31358EB01DB31BC400AC7119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31358EB31DB31BC400AC7119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31358EB51DB31BC400AC7119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				31358EB91DB31BDE00AC7119 /* Cely Demo.entitlements */,
-				31358EAD1DB31BC400AC7119 /* Main.storyboard */,
+				31358EAD1DB31BC400AC7119 /* Mainn.storyboard */,
 				317516401DB7B23C00974002 /* TestStoryboard.storyboard */,
 				31358EB01DB31BC400AC7119 /* Assets.xcassets */,
 				31358EB21DB31BC400AC7119 /* LaunchScreen.storyboard */,
@@ -400,7 +400,7 @@
 				31358EB41DB31BC400AC7119 /* LaunchScreen.storyboard in Resources */,
 				317516421DB7BD9D00974002 /* TestStoryboard.storyboard in Resources */,
 				31358EB11DB31BC400AC7119 /* Assets.xcassets in Resources */,
-				31358EAF1DB31BC400AC7119 /* Main.storyboard in Resources */,
+				31358EAF1DB31BC400AC7119 /* Mainn.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,12 +482,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		31358EAD1DB31BC400AC7119 /* Main.storyboard */ = {
+		31358EAD1DB31BC400AC7119 /* Mainn.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				31358EAE1DB31BC400AC7119 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Mainn.storyboard;
 			sourceTree = "<group>";
 		};
 		31358EB21DB31BC400AC7119 /* LaunchScreen.storyboard */ = {
